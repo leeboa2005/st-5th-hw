@@ -9,7 +9,8 @@ const textsSlice = createSlice({
     reducers: {
         // 텍스트를 추가하는 리듀서
         addText: (state, action) => {
-            state.items.push(action.payload);
+            const newText = action.payload;
+            state.push(newText);
         },
     },
 });
