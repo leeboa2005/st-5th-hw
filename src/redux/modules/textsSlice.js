@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// 텍스트 슬라이스 생성함
+// 텍스트 슬라이스 생성
 const textsSlice = createSlice({
     name: 'textData',
     initialState: {
@@ -10,7 +10,7 @@ const textsSlice = createSlice({
         // 텍스트를 추가하는 리듀서
         addText: (state, action) => {
             const newText = action.payload;
-            state.push(newText);
+            state.items.push(newText); // state.items에 새로운 텍스트 추가
         },
     },
 });
